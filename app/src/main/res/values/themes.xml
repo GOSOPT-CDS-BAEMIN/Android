@@ -16,33 +16,142 @@
     </style>
 
     <!-- Baemin TextAppearance -->
-    <style name="TextAppearance.Baemin.System1" parent="">
+    <style name="TextAppearance.Baemin.display4" parent="">
         <item name="android:textSize">20sp</item>
-        <item name="android:fontFamily">@font/pretendard_semibold</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
     </style>
 
-    <style name="TextAppearance.Baemin.System2" parent="">
+    <style name="TextAppearance.Baemin.display5" parent="">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="TextAppearance.Baemin.headline_24pt" parent="">
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="TextAppearance.Baemin.headline_18pt" parent="">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="TextAppearance.Baemin.subhead1_16pt" parent="">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="TextAppearance.Baemin.subhead1_16pt_2spaces" parent="">
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">-2</item>
+        <item name="android:fontFamily">@font/pretendard_medium</item>
+    </style>
+
+    <style name="TextAppearance.Baemin.title1_semibold" parent="">
         <item name="android:textSize">16sp</item>
-        <item name="android:fontFamily">@font/pretendard_medium</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
     </style>
 
-    <style name="TextAppearance.Baemin.System3" parent="">
+    <style name="TextAppearance.Baemin.title2.extrabold" parent="">
         <item name="android:textSize">14sp</item>
-        <item name="android:fontFamily">@font/pretendard_regular</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
     </style>
 
-    <style name="TextAppearance.Baemin.System3.Title" parent="">
+    <style name="TextAppearance.Baemin.title3" parent="">
         <item name="android:textSize">14sp</item>
-        <item name="android:fontFamily">@font/pretendard_semibold</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
     </style>
 
-    <style name="TextAppearance.Baemin.System4.Regular" parent="">
+    <style name="TextAppearance.Baemin.title4" parent="">
         <item name="android:textSize">12sp</item>
-        <item name="android:fontFamily">@font/pretendard_regular</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
     </style>
 
-    <style name="TextAppearance.Baemin.System4.Medium" parent="">
+    <style name="TextAppearance.Baemin.body1" parent="">
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">22</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="TextAppearance.Baemin.body2" parent="">
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">18</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="TextAppearance.Baemin.body3" parent="">
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">22</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="TextAppearance.Baemin.body4" parent="">
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">18</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="TextAppearance.Baemin.body5" parent="">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="TextAppearance.Baemin.body6" parent="">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="TextAppearance.Baemin.body7" parent="">
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="TextAppearance.Baemin.body8" parent="">
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="TextAppearance.Baemin.body9" parent="">
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="TextAppearance.Baemin.body10" parent="">
         <item name="android:textSize">12sp</item>
-        <item name="android:fontFamily">@font/pretendard_medium</item>
+        <item name="android:letterSpacing">18</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="TextAppearance.Baemin.toast" parent="">
+        <item name="android:textSize">13sp</item>
+        <item name="android:letterSpacing">2</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="TextAppearance.Baemin.popup" parent="">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="TextAppearance.Baemin.bottomtext" parent="">
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="TextAppearance.Baemin.captiontext" parent="">
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="TextAppearance.Baemin.button1" parent="">
+        <item name="android:textSize">13sp</item>
+        <item name="android:letterSpacing">16</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="TextAppearance.Baemin.button2" parent="">
+        <item name="android:textSize">13sp</item>
+        <item name="android:letterSpacing">16</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
     </style>
 </resources>

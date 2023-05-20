@@ -16,9 +16,9 @@
     <color name="baemin_grey_4">#D9D9D9</color>
     <color name="baemin_grey_5">#888888</color>
     <color name="baemin_sub_1">#EF8A33</color>
-    <color name="baemin_sub_2">#3B7AF6</color>
+    <color name="baemin_sub_2">#1A7DFE</color>
     <color name="baemin_sub_3">#B69D7E</color>
-    <color name="baemin_sub_4">#FDF3E7</color>
+    <color name="baemin_sub_4">#F5EEE6</color>
     <color name="baemin_sub_5">#DE4E9E</color>
     <color name="baemin_sub_6">#FCEFF9</color>
     <color name="baemin_sub_7">#F6C844</color>
@@ -29,6 +29,6 @@
     <color name="baemin_sub_12">#3B8397</color>
     <color name="baemin_sub_13">#ED3C00</color>
     <color name="baemin_primary">#5EBEBB</color>
-    <color name="baemin_background">#F3F5F7</color>
+    <color name="baemin_background">#F4F5F7</color>
 
 </resources>
