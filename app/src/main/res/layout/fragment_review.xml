@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_review"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_detail_review_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="18dp"
+            android:text="사장님 공지"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_detail_review_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="18dp"
+            android:layout_marginTop="32dp"
+            android:text="2021년 4월 21일"
+            android:textColor="@color/baemin_grey_5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_detail_review_image_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_review_notice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/iv_detail_review_main" />
+
+        <ImageView
+            android:id="@+id/iv_detail_review_image_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/iv_detail_review_image_main"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/iv_detail_review_sub" />
+
+        <View
+            android:id="@+id/view_detail_line"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="19dp"
+            android:background="@color/baemin_grey_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_detail_review_image_sub" />
+
+        <TextView
+            android:id="@+id/tv_detail_review_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="18dp"
+            android:textSize="40dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="32dp"
+            android:text="5.0"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/view_detail_line"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ic_detail_review_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_review_rate"
+            app:layout_constraintStart_toStartOf="@id/tv_detail_review_rate"
+            app:layout_constraintEnd_toEndOf="@id/tv_detail_review_rate"
+            android:src="@drawable/ic_detail_review_rate" />
+
+        <ImageView
+            android:id="@+id/iv_detail_review_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="35dp"
+            app:layout_constraintTop_toBottomOf="@id/view_detail_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/iv_detail_review_star" />
+
+        <View
+            android:id="@+id/view_detail_line_2"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="146dp"
+            android:background="@color/baemin_grey_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_detail_line"/>
+
+        <TextView
+            android:id="@+id/tv_detail_review_recent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="18dp"
+            android:textStyle="bold"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="28dp"
+            android:text="최근 리뷰 1,619개"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/view_detail_line_2"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_detail_review_boss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="18dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="10dp"
+            android:text="사장님 댓글 1,112개"
+            android:textColor="@color/baemin_grey_5"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_review_recent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_detail_review_clean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="18dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="10dp"
+            android:text="클린 리뷰 시스템이 작동중입니다.                 자세히 >"
+            android:background="@drawable/shape_gray5fill_29_rect"
+            android:textColor="@color/white"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="39dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_review_recent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_detail_review_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintTop_toTopOf="@id/iv_detail_review_filter"
+            app:layout_constraintBottom_toBottomOf="@id/iv_detail_review_filter"
+            android:text="필터"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/iv_detail_review_filter" />
+
+        <ImageView
+            android:id="@+id/iv_detail_review_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_review_clean"
+            android:src="@drawable/ic_detail_review_filter" />
+
+        <View
+            android:id="@+id/view_detail_line_3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/baemin_grey_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_review_filter"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
