@@ -12,7 +12,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="홈"
+        android:text="중국도산면"
+        style="@style/TextAppearance.Baemin.body2"
         android:textColor="@color/black" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
