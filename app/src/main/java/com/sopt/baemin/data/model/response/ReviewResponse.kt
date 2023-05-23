@@ -7,7 +7,7 @@ data class ReviewResponse(
     val status: Int,
     val success: Boolean,
     val message: String,
-    val data: Review
+    val data: List<Review>
 )
 
 @Serializable
