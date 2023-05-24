@@ -7,5 +7,5 @@ plugins {
 
 ext {
     lifecycleVersion = '2.6.1'
-    coroutineVersion = '1.6.4'
+    coroutineVersion = '1.7.1'
 }
