@@ -6,6 +6,10 @@
     <data>
 
         <import type="android.view.View" />
+
+        <variable
+            name="vm"
+            type="com.sopt.baemin.presentation.detail.DetailViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
