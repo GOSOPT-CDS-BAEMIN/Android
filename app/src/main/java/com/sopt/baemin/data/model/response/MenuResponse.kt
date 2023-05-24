@@ -7,7 +7,7 @@ data class MenuResponse(
     val status: Int,
     val success: Boolean,
     val message: String,
-    val data: StoreData?
+    val data: StoreData
 )
 
 @Serializable
