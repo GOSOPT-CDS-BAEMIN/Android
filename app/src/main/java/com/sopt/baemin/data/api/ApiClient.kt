@@ -28,6 +28,6 @@ object ApiClient {
                 .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
                 .build()
         }
-        return retrofit!!
+        return requireNotNull(retrofit)
     }
 }
