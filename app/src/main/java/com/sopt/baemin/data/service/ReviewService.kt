@@ -1,4 +1,4 @@
-package com.sopt.baemin.data.api
+package com.sopt.baemin.data.service
 
 import com.sopt.baemin.data.model.response.ReviewResponse
 import retrofit2.Call
