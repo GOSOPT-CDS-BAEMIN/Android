@@ -23,14 +23,15 @@
             app:layout_constraintDimensionRatio="1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:src="@color/black" />
+            android:src="@drawable/iv_review_profile" />
 
         <TextView
             android:id="@+id/tv_detail_review_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="9dp"
-            android:text="롤리 >"
+            android:text="@{data.nickname}"
+            tools:text="하조스"
             android:textStyle="bold"
             android:textColor="@color/black"
             app:layout_constraintStart_toEndOf="@id/iv_detail_review_profile"
@@ -74,6 +75,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="21dp"
+            setImage="@{data.reviewImageUrl}"
             app:layout_constraintTop_toBottomOf="@id/iv_detail_review_star_rate"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -83,7 +85,8 @@
             android:id="@+id/tv_detail_review_comment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="언제 먹어도 최고입니다."
+            android:text="@{data.content}"
+            tools:text="언제 먹어도 최고입니다."
             android:textColor="@color/black"
             app:layout_constraintTop_toBottomOf="@id/iv_detail_review_food"
             app:layout_constraintStart_toStartOf="parent"/>
