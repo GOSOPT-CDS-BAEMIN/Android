@@ -5,10 +5,12 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.sopt.baemin.data.api.ApiClient
-import com.sopt.baemin.data.api.MenuService
-import com.sopt.baemin.data.api.ReviewService
 import com.sopt.baemin.data.model.response.MenuResponse
+import com.sopt.baemin.data.model.response.Review
 import com.sopt.baemin.data.model.response.ReviewResponse
+import com.sopt.baemin.data.model.response.StoreInfo
+import com.sopt.baemin.data.service.MenuService
+import com.sopt.baemin.data.service.ReviewService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -20,6 +22,12 @@ class DetailViewModel : ViewModel() {
     private val _reviewInfo = MutableLiveData<ReviewResponse>()
     val reviewInfo: LiveData<ReviewResponse>
         get() = _reviewInfo
+
+    private val _storeInfo: MutableLiveData<StoreInfo> = MutableLiveData()
+    val storeInfo: LiveData<StoreInfo> = _storeInfo
+
+    private val _review = MutableLiveData<List<Review>>()
+    val review: LiveData<List<Review>> = _review
 
     private val _menuInfo = MutableLiveData<MenuResponse>()
     val menuInfo: LiveData<MenuResponse>
