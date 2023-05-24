@@ -1,6 +1,7 @@
 package com.sopt.baemin.presentation.detail.review
 
 import android.os.Bundle
+import android.view.View
 import androidx.fragment.app.viewModels
 import com.sopt.baemin.R
 import com.sopt.baemin.databinding.FragmentReviewBinding
@@ -11,8 +12,9 @@ class ReviewFragment : BindingFragment<FragmentReviewBinding>(R.layout.fragment_
     private val viewModel: DetailViewModel by viewModels()
     private val reviewAdapter: ReviewAdapter = ReviewAdapter()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.vm = viewModel
         initAdapter()
         initObserve()
     }
