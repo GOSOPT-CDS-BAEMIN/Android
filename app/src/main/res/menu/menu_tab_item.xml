@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/food1"
+        android:title="전체"/>
+    <item
+        android:id="@+id/food2"
+        android:title="@string/food2"/>
+    <item
+        android:id="@+id/food3"
+        android:title="@string/food3"/>
+    <item
+        android:id="@+id/food4"
+        android:title="@string/food4"/>
+
+</menu>
