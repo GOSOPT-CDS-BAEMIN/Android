@@ -6,9 +6,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
 
-inline fun <reified T : Fragment> AppCompatActivity.oreplace(@IdRes frameId: Int) {
+inline fun <reified T : Fragment> AppCompatActivity.replace(@IdRes fcvId: Int) {
     supportFragmentManager.commit {
-        replace<T>(frameId)
+        replace<T>(fcvId)
         setReorderingAllowed(true)
     }
 }
