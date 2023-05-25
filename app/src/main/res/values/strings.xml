@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Baemin</string>
+    <string name="food2"><![CDATA[족발\u00B7보쌈]]></string>
+    <string name="food3"><![CDATA[찜\u00B7탕\u00B7찌개]]></string>
+    <string name="food4"><![CDATA[돈가스\u00B7회\u00B7일식]]></string>
 </resources>
