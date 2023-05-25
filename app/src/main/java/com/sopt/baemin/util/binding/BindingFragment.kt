@@ -8,12 +8,13 @@ import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
+import com.sopt.baemin.R
 
 abstract class BindingFragment<T : ViewDataBinding>(@LayoutRes private val layoutRes: Int) :
     Fragment() {
     private var _binding: T? = null
     protected val binding: T
-        get() = requireNotNull(_binding) { "${this::class.java.simpleName} error." }
+        get() = requireNotNull(_binding) { getString(R.string.binding_error_msg) }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -21,6 +22,7 @@ abstract class BindingFragment<T : ViewDataBinding>(@LayoutRes private val layou
         savedInstanceState: Bundle?
     ): View {
         _binding = DataBindingUtil.inflate(inflater, layoutRes, container, false)
+        binding.lifecycleOwner = viewLifecycleOwner
         return binding.root
     }
 
