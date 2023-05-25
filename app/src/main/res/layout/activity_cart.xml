@@ -70,13 +70,56 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cl_cart_header" />
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_item_sel_header"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingHorizontal="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider_cart_header">
+
+            <CheckBox
+                android:id="@+id/cb_item_sel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:buttonTint="?colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_item_sel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="전체선택(2/3)"
+                android:textAppearance="@style/TextAppearance.Baemin.body5"
+                app:layout_constraintBottom_toBottomOf="@id/cb_item_sel"
+                app:layout_constraintStart_toEndOf="@id/cb_item_sel"
+                app:layout_constraintTop_toTopOf="@id/cb_item_sel" />
+
+            <TextView
+                android:id="@+id/tv_item_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="상품삭제"
+                android:textAppearance="@style/TextAppearance.Baemin.body5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="0dp"
             android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/divider_cart_header" />
+            app:layout_constraintTop_toBottomOf="@id/cl_item_sel_header" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
