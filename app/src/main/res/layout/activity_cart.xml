@@ -65,7 +65,7 @@
             android:id="@+id/divider_cart_header"
             android:layout_width="0dp"
             android:layout_height="1dp"
-            android:background="@color/baemin_gray_4"
+            android:background="@color/baemin_gray_2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cl_cart_header" />
@@ -113,16 +113,113 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@id/fl_order"
+            android:background="@color/baemin_gray_2"
+            android:paddingBottom="130dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cl_item_sel_header" />
+            app:layout_constraintTop_toBottomOf="@id/cl_item_sel_header">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_cart_store"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_cart_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_cart_store">
+
+                <TextView
+                    android:id="@+id/tv_order_amount_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="총 주문금액"
+                    android:textAppearance="@style/TextAppearance.Baemin.body3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_order_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.Baemin.body3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_order_amount_label"
+                    tools:text="18,500원" />
+
+                <View
+                    android:id="@+id/divider_cart_order"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/baemin_gray_2"
+                    app:layout_constraintEnd_toEndOf="@id/tv_order_amount"
+                    app:layout_constraintStart_toStartOf="@id/tv_order_amount_label"
+                    app:layout_constraintTop_toBottomOf="@id/tv_order_amount_label" />
+
+                <TextView
+                    android:id="@+id/tv_pay_amount_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="결제예정금액"
+                    android:textAppearance="@style/TextAppearance.Baemin.subhead1_16pt"
+                    app:layout_constraintStart_toStartOf="@id/divider_cart_order"
+                    app:layout_constraintTop_toBottomOf="@id/divider_cart_order" />
+
+                <ImageView
+                    android:id="@+id/iv_tip_caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_delivery_tip_caption"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_pay_amount_label"
+                    app:layout_constraintStart_toEndOf="@id/tv_pay_amount_label"
+                    app:layout_constraintTop_toTopOf="@id/tv_pay_amount_label" />
+
+                <TextView
+                    android:id="@+id/tv_pay_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.Baemin.subhead1_16pt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_pay_amount_label"
+                    tools:text="21,300원" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_company_notice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="@string/cart_company_notice"
+                android:textColor="@color/baemin_gray_5"
+                android:textAppearance="@style/TextAppearance.Baemin.body10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cl_cart_result" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <FrameLayout
-            android:id="@+id/fl_order"
+            android:id="@+id/fl_order_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
