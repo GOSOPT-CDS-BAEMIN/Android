@@ -74,18 +74,17 @@
             android:id="@+id/cl_item_sel_header"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:paddingHorizontal="12dp"
+            android:paddingHorizontal="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/divider_cart_header">
 
             <CheckBox
                 android:id="@+id/cb_item_sel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="?colorPrimary"
-                android:minWidth="0dp"
-                android:minHeight="0dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/sel_cart_checkbox"
+                android:button="@null"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -94,7 +93,7 @@
                 android:id="@+id/tv_item_sel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
+                android:layout_marginStart="6dp"
                 android:text="전체선택(2/3)"
                 android:textAppearance="@style/TextAppearance.Baemin.body5"
                 app:layout_constraintBottom_toBottomOf="@id/cb_item_sel"
@@ -210,8 +209,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:text="@string/cart_company_notice"
-                android:textColor="@color/baemin_gray_5"
                 android:textAppearance="@style/TextAppearance.Baemin.body10"
+                android:textColor="@color/baemin_gray_5"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/cl_cart_result" />

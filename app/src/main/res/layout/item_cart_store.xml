@@ -1,6 +1,218 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <data>
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_store_header"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingVertical="22dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <CheckBox
+                    android:id="@+id/cb_store_sel"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="18dp"
+                    android:background="@drawable/sel_cart_checkbox"
+                    android:button="@null"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_store_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textAppearance="@style/TextAppearance.Baemin.subhead1_16pt"
+                    app:layout_constraintBottom_toBottomOf="@id/cb_store_sel"
+                    app:layout_constraintStart_toEndOf="@id/cb_store_sel"
+                    app:layout_constraintTop_toTopOf="@id/cb_store_sel"
+                    tools:text="매장 이름" />
+
+                <ImageView
+                    android:id="@+id/iv_store_del"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:src="@drawable/ic_store_delete"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/divider_store_header"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/baemin_gray_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cl_store_header" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_store_food"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cl_store_header" />
+
+            <RadioGroup
+                android:id="@+id/rg_delivery_pickup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_store_food">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/sel_cart_radio_button"
+                        android:button="@null" />
+
+                    <ImageView
+                        android:id="@+id/iv_delivery"
+                        android:layout_width="46dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_delivery" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/sel_cart_radio_button"
+                        android:button="@null" />
+
+                    <ImageView
+                        android:id="@+id/iv_pickup"
+                        android:layout_width="46dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_pickup" />
+
+                </LinearLayout>
+
+            </RadioGroup>
+
+            <View
+                android:id="@+id/divider_menu_add_top"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/baemin_gray_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rg_delivery_pickup" />
+
+            <ImageView
+                android:id="@+id/iv_menu_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="14dp"
+                android:src="@drawable/ic_menu_add"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider_menu_add_top" />
+
+            <View
+                android:id="@+id/divider_menu_add_bottom"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="14dp"
+                android:background="@color/baemin_gray_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_menu_add" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider_menu_add_bottom">
+
+                <TextView
+                    android:id="@+id/tv_store_food_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="14dp"
+                    android:layout_marginStart="18dp"
+                    android:textAppearance="@style/TextAppearance.Baemin.body3"
+                    android:textColor="@color/baemin_gray_5"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="총 2개" />
+
+                <TextView
+                    android:id="@+id/tv_store_food_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="14dp"
+                    android:layout_marginStart="18dp"
+                    android:textAppearance="@style/TextAppearance.Baemin.body1"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_store_food_num"
+                    app:layout_constraintStart_toEndOf="@id/tv_store_food_num"
+                    app:layout_constraintTop_toTopOf="@id/tv_store_food_num"
+                    tools:text="18,500원" />
+
+                <TextView
+                    android:id="@+id/tv_store_order"
+                    android:layout_width="155dp"
+                    android:layout_height="0dp"
+                    android:background="?colorPrimary"
+                    android:gravity="center"
+                    android:text="배달 주문하기"
+                    android:textAppearance="@style/TextAppearance.Baemin.title1_semibold"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>
