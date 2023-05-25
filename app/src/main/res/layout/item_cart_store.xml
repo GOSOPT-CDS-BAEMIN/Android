@@ -5,6 +5,9 @@
 
     <data>
 
+        <variable
+            name="store"
+            type="com.sopt.baemin.data.model.response.ResponseGetCartListDto.Store" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
@@ -22,8 +25,8 @@
                 android:id="@+id/cl_store_header"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:paddingVertical="22dp"
                 android:paddingHorizontal="14dp"
+                android:paddingVertical="22dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -43,6 +46,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
+                    android:text="@{store.storeName}"
                     android:textAppearance="@style/TextAppearance.Baemin.subhead1_16pt"
                     app:layout_constraintBottom_toBottomOf="@id/cb_store_sel"
                     app:layout_constraintStart_toEndOf="@id/cb_store_sel"
@@ -106,6 +110,15 @@
                         android:layout_gravity="center"
                         android:layout_marginStart="8dp"
                         android:src="@drawable/ic_delivery" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:text="@{@string/cart_delivery_fee(store.deliveryFee)}"
+                        android:textAppearance="@style/TextAppearance.Baemin.body6"
+                        android:textColor="?colorPrimary"
+                        tools:text="배달팁 2,800원" />
 
                 </LinearLayout>
 
@@ -180,7 +193,8 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:text="총 2개" />
+                    tools:text="총 2개"
+                    android:text="@{@string/cart_store_food_num(store.foods.size)}" />
 
                 <TextView
                     android:id="@+id/tv_store_food_price"

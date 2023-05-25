@@ -6,6 +6,9 @@
 
     <data>
 
+        <variable
+            name="vm"
+            type="com.sopt.baemin.presentation.cart.CartViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

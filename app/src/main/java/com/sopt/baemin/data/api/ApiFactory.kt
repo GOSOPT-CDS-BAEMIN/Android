@@ -2,7 +2,7 @@ package com.sopt.baemin.data.api
 
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import com.sopt.baemin.BuildConfig.*
-import com.sopt.baemin.data.service.ExampleService
+import com.sopt.baemin.data.service.CartService
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
@@ -31,6 +31,6 @@ object ApiFactory {
     inline fun <reified T> create(): T = retrofit.create(T::class.java)
 
     object ServicePool {
-        val exampleService = create<ExampleService>()
+        val cartService = create<CartService>()
     }
 }
