@@ -116,27 +116,26 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@color/baemin_gray_2"
-            android:paddingBottom="130dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/fl_order_btn"
             app:layout_constraintTop_toBottomOf="@id/cl_item_sel_header">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_cart_store"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="12dp"
-                android:layout_marginVertical="20dp"
+                android:paddingVertical="4dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_cart_store" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl_cart_result"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:background="@color/white"
                 android:paddingHorizontal="14dp"
                 android:paddingVertical="24dp"

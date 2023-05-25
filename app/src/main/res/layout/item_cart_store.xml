@@ -12,7 +12,7 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_margin="14dp"
         app:cardCornerRadius="7dp"
         app:cardElevation="4dp">
 
@@ -78,7 +78,9 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cl_store_header" />
+                app:layout_constraintTop_toBottomOf="@id/cl_store_header"
+                tools:itemCount="2"
+                tools:listitem="@layout/item_store_food" />
 
             <RadioGroup
                 android:id="@+id/rg_delivery_pickup"
@@ -202,7 +204,7 @@
                     android:background="?colorPrimary"
                     android:gravity="center"
                     android:text="배달 주문하기"
-                    android:textAppearance="@style/TextAppearance.Baemin.title1_semibold"
+                    android:textAppearance="@style/TextAppearance.Baemin.subhead1_16pt"
                     android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
