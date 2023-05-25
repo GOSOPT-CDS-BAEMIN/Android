@@ -14,7 +14,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_cart_header"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="44dp"
             android:paddingHorizontal="18dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +72,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_item_sel_header"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="40dp"
             android:paddingHorizontal="16dp"
             app:layout_constraintEnd_toEndOf="parent"

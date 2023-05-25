@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -25,6 +23,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:paddingVertical="22dp"
+                android:paddingHorizontal="14dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -33,7 +32,6 @@
                     android:id="@+id/cb_store_sel"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:layout_marginStart="18dp"
                     android:background="@drawable/sel_cart_checkbox"
                     android:button="@null"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -55,7 +53,6 @@
                     android:id="@+id/iv_store_del"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="18dp"
                     android:src="@drawable/ic_store_delete"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -198,7 +195,7 @@
                     tools:text="18,500원" />
 
                 <TextView
-                    android:id="@+id/tv_store_order"
+                    android:id="@+id/tv_store_order_btn"
                     android:layout_width="155dp"
                     android:layout_height="0dp"
                     android:background="?colorPrimary"
@@ -213,7 +210,6 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
     </com.google.android.material.card.MaterialCardView>
 
