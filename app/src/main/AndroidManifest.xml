@@ -15,17 +15,21 @@
         android:theme="@style/Theme.Baemin"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+
         <activity
             android:name=".presentation.cart.CartActivity"
-            android:exported="false" />
-        <activity
-            android:name=".presentation.MainActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".presentation.MainActivity"
+            android:exported="true">
+
         </activity>
     </application>
 
