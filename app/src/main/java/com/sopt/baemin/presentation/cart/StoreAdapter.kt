@@ -4,20 +4,28 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.sopt.baemin.data.model.response.ResponseGetCartListDto.*
+import com.sopt.baemin.data.model.response.Store
 import com.sopt.baemin.databinding.ItemCartStoreBinding
 import com.sopt.baemin.util.ItemDiffCallback
 
-class CartAdapter : ListAdapter<Store, CartAdapter.CartViewHolder>(diffUtil) {
-    class CartViewHolder(private val binding: ItemCartStoreBinding) :
+class StoreAdapter : ListAdapter<Store, StoreAdapter.StoreViewHolder>(diffUtil) {
+    class StoreViewHolder(private val binding: ItemCartStoreBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(store: Store) {
             binding.store = store
+            initFoodAdapter(store)
+        }
+
+        // 한 매장을 바인딩 시킬 때마다 food adapter 재생성 (일단 해보자)
+        private fun initFoodAdapter(store: Store) {
+            val foodAdapter = FoodAdapter()
+            binding.rvStoreFood.adapter = foodAdapter
+            foodAdapter.submitList(store.foods)
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CartViewHolder {
-        return CartViewHolder(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StoreViewHolder {
+        return StoreViewHolder(
             ItemCartStoreBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
@@ -26,7 +34,7 @@ class CartAdapter : ListAdapter<Store, CartAdapter.CartViewHolder>(diffUtil) {
         )
     }
 
-    override fun onBindViewHolder(holder: CartViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: StoreViewHolder, position: Int) {
         holder.bind(getItem(position))
     }
 

@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
+        <variable
+            name="food"
+            type="com.sopt.baemin.data.model.response.Food" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -26,7 +30,8 @@
             android:layout_width="68dp"
             android:layout_height="0dp"
             android:layout_marginStart="12dp"
-            android:src="@drawable/ic_launcher_background"
+            setRoundedCornersImage="@{food.foodImageUrl}"
+            tools:src="@drawable/ic_launcher_background"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintStart_toEndOf="@id/cb_food_sel"
             app:layout_constraintTop_toTopOf="@id/cb_food_sel" />
@@ -36,20 +41,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="14dp"
-            android:text="음식 이름"
+            android:text="@{food.foodName}"
             android:textAppearance="@style/TextAppearance.Baemin.subhead1_16pt"
             app:layout_constraintStart_toEndOf="@id/iv_food_img"
-            app:layout_constraintTop_toTopOf="@id/iv_food_img" />
+            app:layout_constraintTop_toTopOf="@id/iv_food_img"
+            tools:text="음식 이름" />
 
         <TextView
             android:id="@+id/tv_food_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="7,500원"
+            android:text="@{food.price}"
             android:textAppearance="@style/TextAppearance.Baemin.body4"
             app:layout_constraintStart_toStartOf="@id/tv_food_name"
-            app:layout_constraintTop_toBottomOf="@id/tv_food_name" />
+            app:layout_constraintTop_toBottomOf="@id/tv_food_name"
+            tools:text="7,500원" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="96dp"
@@ -78,12 +85,13 @@
                 android:id="@+id/tv_food_num"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1"
+                android:text="@{food.foodCount}"
                 android:textAppearance="@style/TextAppearance.Baemin.body5"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/iv_food_num_plus"
                 app:layout_constraintStart_toEndOf="@id/iv_food_num_minus"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="1" />
 
             <ImageView
                 android:id="@+id/iv_food_num_plus"

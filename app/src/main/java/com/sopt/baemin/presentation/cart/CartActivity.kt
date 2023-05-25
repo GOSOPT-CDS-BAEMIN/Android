@@ -7,12 +7,11 @@ import com.sopt.baemin.R
 import com.sopt.baemin.databinding.ActivityCartBinding
 import com.sopt.baemin.util.binding.BindingActivity
 import com.sopt.baemin.util.extension.showSnackbar
-import com.sopt.baemin.util.state.RemoteUiState
 import com.sopt.baemin.util.state.RemoteUiState.*
 
 class CartActivity : BindingActivity<ActivityCartBinding>(R.layout.activity_cart) {
     private val viewModel by viewModels<CartViewModel>()
-    private var cartAdapter: CartAdapter? = null
+    private val storeAdapter by lazy { StoreAdapter() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,10 +21,15 @@ class CartActivity : BindingActivity<ActivityCartBinding>(R.layout.activity_cart
         initCartListStateObserver()
     }
 
+    private fun initCartRecyclerView() {
+        binding.rvCartStore.adapter = storeAdapter
+        binding.rvCartStore.layoutManager = LinearLayoutManager(this)
+    }
+
     private fun initCartListStateObserver() {
         viewModel.getCartListState.observe(this) { state ->
             when (state) {
-                is Success -> cartAdapter?.submitList(viewModel.cartList)
+                is Success -> storeAdapter.submitList(viewModel.storeList)
                 is Failure -> showSnackbar(
                     binding.root,
                     getString(R.string.cart_list_empty_err_msg)
@@ -33,11 +37,5 @@ class CartActivity : BindingActivity<ActivityCartBinding>(R.layout.activity_cart
                 is Error -> showSnackbar(binding.root, getString(R.string.network_err_msg))
             }
         }
-    }
-
-    private fun initCartRecyclerView() {
-        cartAdapter = CartAdapter()
-        binding.rvCartStore.adapter = cartAdapter
-        binding.rvCartStore.layoutManager = LinearLayoutManager(this)
     }
 }

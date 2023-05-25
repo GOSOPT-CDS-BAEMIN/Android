@@ -7,7 +7,7 @@
 
         <variable
             name="store"
-            type="com.sopt.baemin.data.model.response.ResponseGetCartListDto.Store" />
+            type="com.sopt.baemin.data.model.response.Store" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
