@@ -5,6 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.sopt.baemin.data.api.ApiFactory.ServicePool.cartService
+import com.sopt.baemin.data.model.request.RequestPostCartItemDto
+import com.sopt.baemin.data.model.response.BaseResponse
 import com.sopt.baemin.data.model.response.ResponseGetCartListDto.*
 import com.sopt.baemin.util.state.RemoteUiState
 import com.sopt.baemin.util.state.RemoteUiState.*
@@ -22,18 +24,39 @@ class CartViewModel : ViewModel() {
         get() = _getCartListState
 
     init {
+        postCartItem()
         getCartList()
     }
 
-    private suspend fun getCartListResult(): Result<List<Store>> = runCatching {
-        cartService.getCartList().stores
+    private fun postCartItem() {
+        viewModelScope.launch {
+            postCartItemResult()
+                .onSuccess { response ->
+                    Timber.d("POST CART ITEM SUCCESS")
+                    Timber.d("${response.status} ${response.success} ${response.message}")
+                }
+                .onFailure { t ->
+                    if (t is HttpException) {
+                        Timber.e("POST CART ITEM FAIL ${t.code()} : ${t.message}}")
+                    }
+                }
+        }
+    }
+
+    private suspend fun postCartItemResult(): Result<BaseResponse<Any>> = kotlin.runCatching {
+        val requestBody = RequestPostCartItemDto(
+            1,
+            2,
+            1
+        )
+        cartService.postCartItem(requestBody)
     }
 
     private fun getCartList() {
         viewModelScope.launch {
             getCartListResult()
                 .onSuccess { cartList ->
-                    if(cartList.isEmpty()){
+                    if (cartList.isEmpty()) {
                         _getCartListState.value = Failure(null)
                         Timber.e("GET CART LIST FAIL : EMPTY!!!")
                         return@onSuccess
@@ -50,5 +73,9 @@ class CartViewModel : ViewModel() {
                     }
                 }
         }
+    }
+
+    private suspend fun getCartListResult(): Result<List<Store>> = runCatching {
+        cartService.getCartList().stores
     }
 }

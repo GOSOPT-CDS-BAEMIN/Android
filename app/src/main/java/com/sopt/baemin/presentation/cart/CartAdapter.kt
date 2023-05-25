@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.sopt.baemin.data.model.response.ResponseGetCartListDto
 import com.sopt.baemin.data.model.response.ResponseGetCartListDto.*
 import com.sopt.baemin.databinding.ItemCartStoreBinding
 import com.sopt.baemin.util.ItemDiffCallback
