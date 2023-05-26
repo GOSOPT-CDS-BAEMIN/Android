@@ -35,7 +35,7 @@
             android:layout_width="68dp"
             android:layout_height="0dp"
             android:layout_marginStart="12dp"
-            android:src="@drawable/ic_launcher_background"
+            setRoundedCornersImage="@{food.foodImageUrl}"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintStart_toEndOf="@id/cb_food_sel"
             app:layout_constraintTop_toTopOf="@id/cb_food_sel" />

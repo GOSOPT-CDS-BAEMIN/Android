@@ -22,15 +22,7 @@
 
         <activity
             android:name=".presentation.menu_detail.MenuDetailActivity"
-            android:exported="true">
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-        </activity>
+            android:exported="true"/>
 
         <activity
             android:name=".presentation.store_list.StoreListActivity"
@@ -39,6 +31,12 @@
         <activity
             android:name=".presentation.cart.CartActivity"
             android:exported="true" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
     </application>
