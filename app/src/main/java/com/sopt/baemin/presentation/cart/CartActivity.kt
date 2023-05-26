@@ -33,11 +33,9 @@ class CartActivity : BindingActivity<ActivityCartBinding>(R.layout.activity_cart
         viewModel.getCartListState.observe(this) { state ->
             when (state) {
                 is Success -> {
-                    viewModel.storeList?.let {
+                    viewModel.storeList?.let { it ->
                         storeAdapter.submitList(it)
-                        updateTotalOrderAmount(it)
-                        updateTotalPayAmount(it)
-                        updateOrderButtonText()
+                        updateTextView(it)
                     }
                 }
                 is Failure -> showSnackbar(
@@ -47,6 +45,12 @@ class CartActivity : BindingActivity<ActivityCartBinding>(R.layout.activity_cart
                 is Error -> showSnackbar(binding.root, getString(R.string.network_err_msg))
             }
         }
+    }
+
+    private fun updateTextView(stores: List<Store>) {
+        updateTotalOrderAmount(stores)
+        updateTotalPayAmount(stores)
+        updateOrderButtonText(stores)
     }
 
     private fun updateTotalOrderAmount(storeList: List<Store>) {
@@ -66,7 +70,12 @@ class CartActivity : BindingActivity<ActivityCartBinding>(R.layout.activity_cart
         binding.tvPayAmount.text = getString(R.string.cart_item_price).format(totalPayAmount)
     }
 
-    private fun updateOrderButtonText() {
+    private fun updateOrderButtonText(stores: List<Store>) {
+        var totalOrderNum = 0
+        for(store in stores){
+            totalOrderNum += store.foods.size
+        }
+        binding.tvTotalOrderNum.text = totalOrderNum.toString()
         binding.btnLastOrder.text = getString(R.string.cart_total_order_btn_text).format(totalPayAmount)
     }
 }

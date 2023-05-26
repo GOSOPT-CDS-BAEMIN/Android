@@ -245,6 +245,28 @@
                 android:stateListAnimator="@null"
                 android:textAppearance="@style/TextAppearance.Baemin.headline_18pt"
                 tools:text="주문하기" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="26dp"
+                android:background="@drawable/shape_white_fill_10_circle">
+
+                <TextView
+                    android:id="@+id/tv_total_order_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.Baemin.subhead1_16pt"
+                    android:textColor="?colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
         </FrameLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
