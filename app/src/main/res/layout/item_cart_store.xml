@@ -89,18 +89,22 @@
                 tools:itemCount="2"
                 tools:listitem="@layout/item_store_food" />
 
-            <RadioGroup
-                android:id="@+id/rg_delivery_pickup"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_radio_group"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:padding="18dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/rv_store_food">
+                android:padding="18dp"
+                app:layout_constraintTop_toBottomOf="@id/rv_store_food" >
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <RadioGroup
+                    android:id="@+id/rg_delivery_pickup"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
 
                     <RadioButton
                         android:id="@+id/rb_delivery"
@@ -115,31 +119,29 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@{@string/cart_delivery_fee(store.deliveryFee)}"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/rb_delivery"
-                        android:textColor="?colorPrimary"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:text="배달팁 2800원" />
+                    <RadioButton
+                        android:id="@+id/rb_pickup"
+                        android:layout_width="76dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/sel_cart_radio_button"
+                        android:button="@null"
+                        android:paddingStart="32dp"
+                        android:text="포장"
+                        android:textAppearance="@style/TextAppearance.Baemin.subhead1_16pt" />
+                </RadioGroup>
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{@string/cart_delivery_fee(store.deliveryFee)}"
+                    android:textColor="?colorPrimary"
+                    app:layout_constraintStart_toEndOf="@id/rg_delivery_pickup"
+                    app:layout_constraintTop_toTopOf="@id/rg_delivery_pickup"
+                    android:layout_marginTop="2dp"
+                    tools:text="배달팁 2800원" />
 
-
-                <RadioButton
-                    android:id="@+id/rb_pickup"
-                    android:layout_width="76dp"
-                    android:layout_height="24dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/sel_cart_radio_button"
-                    android:button="@null"
-                    android:paddingStart="32dp"
-                    android:text="포장"
-                    android:textAppearance="@style/TextAppearance.Baemin.subhead1_16pt" />
-
-            </RadioGroup>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <View
                 android:id="@+id/divider_menu_add_top"
@@ -148,7 +150,7 @@
                 android:background="@color/baemin_gray_2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/rg_delivery_pickup" />
+                app:layout_constraintTop_toBottomOf="@id/cl_radio_group" />
 
             <ImageView
                 android:id="@+id/iv_menu_add"

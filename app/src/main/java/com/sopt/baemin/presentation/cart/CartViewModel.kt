@@ -19,7 +19,7 @@ class CartViewModel : ViewModel() {
     private val _getStoreListState = MutableLiveData<RemoteUiState>()
     val getCartListState: LiveData<RemoteUiState>
         get() = _getStoreListState
-    
+
     init {
         getStoreList()
     }
