@@ -2,9 +2,7 @@ package com.sopt.baemin.data.api
 
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import com.sopt.baemin.BuildConfig.*
-import com.sopt.baemin.data.service.ExampleService
-import com.sopt.baemin.data.service.FoodListReviewService
-import com.sopt.baemin.data.service.MenuDetailService
+import com.sopt.baemin.data.service.BaeminService
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
@@ -12,7 +10,8 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 
-object ApiFactory {
+object ApiClient {
+
     private const val CONTENT_TYPE = "application/json"
 
     private val okHttpClient = OkHttpClient.Builder()
@@ -33,7 +32,6 @@ object ApiFactory {
     inline fun <reified T> create(): T = retrofit.create(T::class.java)
 
     object ServicePool {
-        val foodListReviewService = ApiFactory.create<FoodListReviewService>()
-        val menuDetailService = ApiFactory.create<MenuDetailService>()
+        val baeminService = create<BaeminService>()
     }
 }
