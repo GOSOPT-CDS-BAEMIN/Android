@@ -1,4 +1,4 @@
-package com.sopt.baemin.presentation.restaurant_list
+package com.sopt.baemin.presentation.store_list
 
 import android.os.Bundle
 import android.view.LayoutInflater

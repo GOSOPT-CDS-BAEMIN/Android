@@ -7,42 +7,25 @@ import kotlinx.serialization.descriptors.*
 import kotlinx.serialization.encoding.*
 
 @Serializable
-data class FoodResponse (
+data class ResponseGetReviewFilterFoodDto (
     val status: Long? = null,
     val success: Boolean? = null,
     val message: String? = null,
-    val data: Data? = null
+    val data: ReviewFilterFood? = null
 )
 
 @Serializable
-data class Data (
+data class ReviewFilterFood (
     val storeInfo: StoreInfo? = null,
     val foods: List<Food>? = null
-)
-
-@Serializable
-data class Food (
-    @SerialName("foodId")
-    val foodID: Long? = null,
-
-    val foodName: String? = null,
-    val price: Long? = null,
-    val foodDescription: String? = null,
-
-    @SerialName("foodImageUrl")
-    val foodImageURL: String? = null,
-
-    val best: Boolean? = null
 )
 
 @Serializable
 data class StoreInfo (
     @SerialName("storeId")
     val storeID: Long? = null,
-
     @SerialName("storeTypeId")
     val storeTypeID: Long? = null,
-
     val storeType: String? = null,
     val storeName: String? = null,
     val deliveryTime: String? = null,

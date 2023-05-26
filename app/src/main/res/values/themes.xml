@@ -41,18 +41,12 @@
         <item name="android:fontFamily">@font/roboto_bold</item>
     </style>
 
-    <style name="TextAppearance.Baemin.subhead1_16pt_2spaces" parent="">
-        <item name="android:textSize">12sp</item>
-        <item name="android:letterSpacing">-2</item>
-        <item name="android:fontFamily">@font/pretendard_medium</item>
-    </style>
-
     <style name="TextAppearance.Baemin.title1_semibold" parent="">
         <item name="android:textSize">16sp</item>
         <item name="android:fontFamily">@font/roboto_medium</item>
     </style>
 
-    <style name="TextAppearance.Baemin.title2.extrabold" parent="">
+    <style name="TextAppearance.Baemin.title2_extrabold" parent="">
         <item name="android:textSize">14sp</item>
         <item name="android:fontFamily">@font/roboto_bold</item>
     </style>
@@ -69,25 +63,21 @@
 
     <style name="TextAppearance.Baemin.body1" parent="">
         <item name="android:textSize">16sp</item>
-        <item name="android:letterSpacing">0.22</item>
         <item name="android:fontFamily">@font/roboto_medium</item>
     </style>
 
     <style name="TextAppearance.Baemin.body2" parent="">
         <item name="android:textSize">16sp</item>
-        <item name="android:letterSpacing">0.18</item>
         <item name="android:fontFamily">@font/roboto_medium</item>
     </style>
 
     <style name="TextAppearance.Baemin.body3" parent="">
         <item name="android:textSize">16sp</item>
-        <item name="android:letterSpacing">0.22</item>
         <item name="android:fontFamily">@font/roboto_regular</item>
     </style>
 
     <style name="TextAppearance.Baemin.body4" parent="">
         <item name="android:textSize">16sp</item>
-        <item name="android:letterSpacing">0.18</item>
         <item name="android:fontFamily">@font/roboto_regular</item>
     </style>
 
@@ -118,13 +108,11 @@
 
     <style name="TextAppearance.Baemin.body10" parent="">
         <item name="android:textSize">12sp</item>
-        <item name="android:letterSpacing">0.18</item>
         <item name="android:fontFamily">@font/roboto_regular</item>
     </style>
 
     <style name="TextAppearance.Baemin.toast" parent="">
         <item name="android:textSize">13sp</item>
-        <item name="android:letterSpacing">0.02</item>
         <item name="android:fontFamily">@font/roboto_bold</item>
     </style>
 
@@ -145,13 +133,11 @@
 
     <style name="TextAppearance.Baemin.button1" parent="">
         <item name="android:textSize">13sp</item>
-        <item name="android:letterSpacing">0.16</item>
         <item name="android:fontFamily">@font/roboto_bold</item>
     </style>
 
     <style name="TextAppearance.Baemin.button2" parent="">
         <item name="android:textSize">13sp</item>
-        <item name="android:letterSpacing">0.16</item>
         <item name="android:fontFamily">@font/roboto_regular</item>
     </style>
 </resources>

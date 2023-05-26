@@ -1,12 +1,11 @@
 package com.sopt.baemin.presentation.menu_detail
 
-import androidx.lifecycle.lifecycleScope
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import com.sopt.baemin.R
 import com.sopt.baemin.data.api.ApiFactory
-import com.sopt.baemin.data.model.response.MenuDetailResponse
+import com.sopt.baemin.data.model.response.ResponseGetMenuDetailDto
 import com.sopt.baemin.databinding.ActivityMenuDetailBinding
 import com.sopt.baemin.util.binding.BindingActivity
 import retrofit2.Call
@@ -22,10 +21,10 @@ class MenuDetailActivity : BindingActivity<ActivityMenuDetailBinding>(R.layout.a
 
     private fun init(){
         Log.e("함수 진입","함수 진입")
-        menuDetailService.getMenuDetail().enqueue(object: retrofit2.Callback<MenuDetailResponse>{
+        menuDetailService.getMenuDetail().enqueue(object: retrofit2.Callback<ResponseGetMenuDetailDto>{
             override fun onResponse(
-                call: Call<MenuDetailResponse>,
-                response: Response<MenuDetailResponse>
+                call: Call<ResponseGetMenuDetailDto>,
+                response: Response<ResponseGetMenuDetailDto>
             ) {
                 if(response.isSuccessful){
                     Log.e("서버 통신","response 성공")
@@ -37,7 +36,7 @@ class MenuDetailActivity : BindingActivity<ActivityMenuDetailBinding>(R.layout.a
                 }
             }
 
-            override fun onFailure(call: Call<MenuDetailResponse>, t: Throwable) {
+            override fun onFailure(call: Call<ResponseGetMenuDetailDto>, t: Throwable) {
                 t.message?.let{ Toast.makeText(this@MenuDetailActivity, "서버통신 실패 응답값이 없습니다.", Toast.LENGTH_SHORT)}
             }
 

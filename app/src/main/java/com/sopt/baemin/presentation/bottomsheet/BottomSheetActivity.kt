@@ -13,11 +13,12 @@ import com.sopt.baemin.R
 import com.sopt.baemin.data.api.ApiFactory
 import com.sopt.baemin.databinding.ActivityReviewFilterBinding
 
-class BottomSheetActivity(context: Context): BottomSheetDialogFragment() {
+class BottomSheetActivity(context: Context) : BottomSheetDialogFragment() {
     private val foodService = ApiFactory.ServicePool.foodListReviewService
     private var _binding: ActivityReviewFilterBinding? = null
-    val binding : ActivityReviewFilterBinding
+    val binding: ActivityReviewFilterBinding
         get() = requireNotNull(_binding) { "이렇게 쓰면 안됩니다~" }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -29,13 +30,13 @@ class BottomSheetActivity(context: Context): BottomSheetDialogFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        view?.findViewById<Button>(R.id.btn_show_review)?.setOnClickListener{
-            Toast.makeText(context, getString(R.string.init_review),Toast.LENGTH_SHORT).show()
+        view?.findViewById<Button>(R.id.btn_show_review)?.setOnClickListener {
+            Toast.makeText(context, getString(R.string.init_review), Toast.LENGTH_SHORT).show()
             dismiss()
         }
     }
 
-    fun init(){
+    fun init() {
         val response = foodService.getFoodListReview()
         if (response.isSuccessful) {
             val result = response.body()
@@ -44,9 +45,8 @@ class BottomSheetActivity(context: Context): BottomSheetDialogFragment() {
                 tvMenu2.text = response.body()?.data?.foods?.get(0)?.foodName
                 tvMenu3.text = response.body()?.data?.foods?.get(0)?.foodName
             }
-        }
-        else{
-            Log.d("서버 통신 오류","서버오류")
+        } else {
+            Log.d("서버 통신 오류", "서버오류")
         }
     }
 }

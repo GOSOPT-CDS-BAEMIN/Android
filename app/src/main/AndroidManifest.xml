@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".BaeminApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -16,25 +17,38 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
 
-        <activity android:name=".presentation.bottomsheet.InitBottomSheetActivity"
-            android:exported="true"/>
-      
         <activity
-            android:name=".presentation.menu_detail.MenuDetailActivity"
-            android:exported="true"/>
+            android:name=".presentation.bottomsheet.InitBottomSheetActivity"
+            android:exported="true" >
 
-        <activity
-            android:name=".presentation.restaurant_list.RestaurantListActivity"
-            android:exported="true"/>
-      
-        <activity
-            android:name=".presentation.MainActivity"
-            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".presentation.menu_detail.MenuDetailActivity"
+            android:exported="true">
+
+
+        </activity>
+
+        <activity
+            android:name=".presentation.store_list.StoreListActivity"
+            android:exported="true">
+
+
+
+        </activity>
+
+        <activity
+            android:name=".presentation.cart.CartActivity"
+            android:exported="true">
+
+
         </activity>
     </application>
 
