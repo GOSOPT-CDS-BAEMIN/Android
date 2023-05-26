@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="9dp"
             android:text="어제"
-            android:textColor="@color/baemin_grey_5"
+            android:textColor="@color/baemin_gray_5"
             app:layout_constraintStart_toEndOf="@id/iv_detail_review_star_rate"
             app:layout_constraintTop_toTopOf="@id/iv_detail_review_star_rate"
             app:layout_constraintBottom_toBottomOf="@id/iv_detail_review_star_rate"/>
@@ -79,7 +79,7 @@
             app:layout_constraintTop_toBottomOf="@id/iv_detail_review_star_rate"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:src="@color/baemin_grey_5" />
+            android:src="@color/baemin_gray_5" />
 
         <TextView
             android:id="@+id/tv_detail_review_comment"

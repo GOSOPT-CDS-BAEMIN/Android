@@ -1,24 +1,17 @@
-package com.sopt.baemin.presentation.restaurant_list
+package com.sopt.baemin.presentation.store_list
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.tabs.TabLayoutMediator
+import com.sopt.baemin.R
 import com.sopt.baemin.databinding.ActivityStorelistBinding
 import com.sopt.baemin.presentation.view.ViewPagerAdapter
+import com.sopt.baemin.util.binding.BindingActivity
 
-class RestaurantListActivity : AppCompatActivity() {
-    private val binding: ActivityStorelistBinding by lazy {
-        ActivityStorelistBinding.inflate(
-            layoutInflater
-        )
-    }
-
+class StoreListActivity : BindingActivity<ActivityStorelistBinding>(R.layout.activity_storelist) {
     private val tabTextList = listOf("전체", "족발·보쌈", "찜·찌개·탕", "돈가스·회·일식")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(binding.root)
-
         binding.viewpager.adapter = ViewPagerAdapter(this)
 
         TabLayoutMediator(binding.tablayout, binding.viewpager) { tab, pos ->

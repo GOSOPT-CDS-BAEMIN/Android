@@ -26,7 +26,7 @@ class Page01Adapter :
         )
     }
 
-    override fun onBindViewHolder(holder: Page01Adapter.Page01ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: Page01ViewHolder, position: Int) {
         holder.bind(currentList[position])
     }
 

@@ -18,10 +18,8 @@ data class RestaurantListResponse(
 data class Datum(
     @SerialName("storeId")
     val storeID: Long?,
-
     @SerialName("storeTypeId")
     val storeTypeID: Long?,
-
     val storeType: StoreType?,
     val storeName: String?,
     val deliveryTime: String?,

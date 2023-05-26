@@ -37,7 +37,7 @@
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="18dp"
                 android:text="2021년 4월 21일"
-                android:textColor="@color/baemin_grey_5"
+                android:textColor="@color/baemin_gray_5"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -66,7 +66,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
                 android:layout_marginTop="19dp"
-                android:background="@color/baemin_grey_2"
+                android:background="@color/baemin_gray_2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/iv_detail_review_image_sub" />
@@ -108,7 +108,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
                 android:layout_marginTop="146dp"
-                android:background="@color/baemin_grey_2"
+                android:background="@color/baemin_gray_2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/view_detail_line" />
@@ -136,7 +136,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="18dp"
                 android:text="사장님 댓글 1,112개"
-                android:textColor="@color/baemin_grey_5"
+                android:textColor="@color/baemin_gray_5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_detail_review_recent" />
 
@@ -183,7 +183,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="12dp"
-                android:background="@color/baemin_grey_2"
+                android:background="@color/baemin_gray_2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_detail_review_filter" />

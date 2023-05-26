@@ -3,8 +3,8 @@ package com.sopt.baemin.presentation.view
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.sopt.baemin.presentation.restaurant_list.Page01Fragment
-import com.sopt.baemin.presentation.restaurant_list.Page02Fragment
+import com.sopt.baemin.presentation.store_list.Page01Fragment
+import com.sopt.baemin.presentation.store_list.Page02Fragment
 
 class ViewPagerAdapter(fragmentActivity: FragmentActivity) :
     FragmentStateAdapter(fragmentActivity) {

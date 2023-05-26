@@ -10,11 +10,11 @@
     <color name="white">#FFFFFFFF</color>
 
     <!-- Baemin Color -->
-    <color name="baemin_grey_1">#F6F6F6</color>
-    <color name="baemin_grey_2">#F4F5F7</color>
-    <color name="baemin_grey_3">#F0F1F3</color>
-    <color name="baemin_grey_4">#D9D9D9</color>
-    <color name="baemin_grey_5">#888888</color>
+    <color name="baemin_gray_1">#F6F6F6</color>
+    <color name="baemin_gray_2">#F4F5F7</color>
+    <color name="baemin_gray_3">#F0F1F3</color>
+    <color name="baemin_gray_4">#D9D9D9</color>
+    <color name="baemin_gray_5">#888888</color>
     <color name="baemin_sub_1">#EF8A33</color>
     <color name="baemin_sub_2">#1A7DFE</color>
     <color name="baemin_sub_3">#B69D7E</color>

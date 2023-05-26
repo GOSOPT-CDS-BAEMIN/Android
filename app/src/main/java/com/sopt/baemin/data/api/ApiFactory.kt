@@ -2,10 +2,7 @@ package com.sopt.baemin.data.api
 
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import com.sopt.baemin.BuildConfig.*
-import com.sopt.baemin.data.service.FoodListReviewService
-import com.sopt.baemin.data.service.MenuDetailService
-import com.sopt.baemin.data.service.MenuService
-import com.sopt.baemin.data.service.ReviewService
+import com.sopt.baemin.data.service.*
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
@@ -21,11 +18,9 @@ object ApiFactory {
             HttpLoggingInterceptor().apply {
                 if (DEBUG) HttpLoggingInterceptor.Level.BODY
                 else HttpLoggingInterceptor.Level.NONE
-            }
-        )
+            })
         .build()
 
-    @OptIn(ExperimentalSerializationApi::class)
     val retrofit: Retrofit = Retrofit.Builder()
         .baseUrl(BASE_URL)
         .addConverterFactory(Json.asConverterFactory(CONTENT_TYPE.toMediaType()))
@@ -35,9 +30,14 @@ object ApiFactory {
     inline fun <reified T> create(): T = retrofit.create(T::class.java)
 
     object ServicePool {
+        val baeminService = create<BaeminService>()
+        val foodListReviewService = create<FoodListReviewService>()
+        val menuDetailService = create<MenuDetailService>()
+
         val menuService = create<MenuService>()
         val reviewService = create<ReviewService>()
-        val foodListReviewService = ApiFactory.create<FoodListReviewService>()
-        val menuDetailService = ApiFactory.create<MenuDetailService>()
+
+        val cartService = create<CartService>()
+
     }
 }
