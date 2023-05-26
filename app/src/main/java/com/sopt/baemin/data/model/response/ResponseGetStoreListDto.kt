@@ -20,13 +20,3 @@ data class Store(
     val minOrderPrice: Int,
     val foods: List<Food>
 )
-
-@Serializable
-data class Food(
-    val foodId: Int,
-    val foodName: String,
-    val price: Int,
-    val foodImageUrl: String,
-    val foodDescription: String,
-    val foodCount: Int
-)

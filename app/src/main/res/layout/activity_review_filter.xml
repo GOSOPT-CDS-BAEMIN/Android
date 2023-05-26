@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="28dp">
+
+        <TextView
+            android:id="@+id/tv_select_food_review"
+            android:textAppearance="@style/TextAppearance.Baemin.headline_18pt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="16dp"
+            android:text="음식을 선택해주세요"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/cb_num1"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/sel_cart_checkbox"
+            android:button="@null"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_select_food_review" />
+
+        <TextView
+            android:id="@+id/tv_menu1"
+            android:textAppearance="@style/TextAppearance.Baemin.body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="28dp"
+            android:text="[신선] 육회비빕밤"
+            app:layout_constraintBottom_toBottomOf="@+id/cb_num1"
+            app:layout_constraintLeft_toRightOf="@id/cb_num1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_select_food_review" />
+
+        <CheckBox
+            android:id="@+id/cb_num2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/sel_cart_checkbox"
+            android:button="@null"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cb_num1" />
+
+        <TextView
+            android:id="@+id/tv_menu2"
+            android:textAppearance="@style/TextAppearance.Baemin.body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="14dp"
+            android:text="[신선] 육회비빕밤"
+            app:layout_constraintBottom_toBottomOf="@+id/cb_num2"
+            app:layout_constraintLeft_toRightOf="@id/cb_num2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_menu1" />
+
+        <CheckBox
+            android:id="@+id/cb_num3"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/sel_cart_checkbox"
+            android:button="@null"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cb_num2" />
+
+        <TextView
+            android:id="@+id/tv_menu3"
+            android:textAppearance="@style/TextAppearance.Baemin.body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="14dp"
+            android:text="[신선] 육회비빕밤"
+            app:layout_constraintBottom_toBottomOf="@+id/cb_num3"
+            app:layout_constraintLeft_toRightOf="@id/cb_num3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_menu2" />
+
+        <ImageButton
+            android:id="@+id/img_btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="180dp"
+            android:background="@drawable/ic_new_opt"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btn_show_review"
+            app:layout_constraintTop_toBottomOf="@+id/cb_num3" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_show_review"
+            android:textAppearance="@style/TextAppearance.Baemin.headline_18pt"
+            android:layout_width="222dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="180dp"
+            android:stateListAnimator="@null"
+            android:background="@drawable/btn_layout"
+            android:text="리뷰보기"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/img_btn_reset"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_menu3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
