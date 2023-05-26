@@ -36,6 +36,7 @@ class ReviewAdapter :
         RecyclerView.ViewHolder(binding.root) {
         fun onBind(review: Review) {
             binding.data = review
+            binding.executePendingBindings()
         }
     }
 

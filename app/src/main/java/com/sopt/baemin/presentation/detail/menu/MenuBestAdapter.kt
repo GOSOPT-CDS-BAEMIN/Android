@@ -1,5 +1,6 @@
 package com.sopt.baemin.presentation.detail.menu
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
@@ -29,13 +30,15 @@ class MenuBestAdapter :
     }
 
     override fun onBindViewHolder(holder: MenuViewHolder, position: Int) {
-        holder.onBind(getItem(position))
+        holder.onBind(currentList[position])
+        Log.d("asdf", currentList.toString())
     }
 
     class MenuViewHolder(private val binding: ItemDetailMenuBestBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun onBind(food: Foods) {
             binding.data = food
+            Log.d("asdf", food.toString())
         }
     }
 
