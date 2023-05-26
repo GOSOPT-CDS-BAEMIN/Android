@@ -19,13 +19,12 @@ class CartViewModel : ViewModel() {
     private val _getStoreListState = MutableLiveData<RemoteUiState>()
     val getCartListState: LiveData<RemoteUiState>
         get() = _getStoreListState
-
+    
     init {
         getStoreList()
     }
 
     private suspend fun getStoreListResult(): Result<List<Store>> = runCatching {
-        Timber.tag("RETROFIT").d("GET STORE LIST START!!!")
         cartService.getStoreList(1).stores
     }
 
@@ -33,7 +32,6 @@ class CartViewModel : ViewModel() {
         viewModelScope.launch {
             getStoreListResult()
                 .onSuccess { stores ->
-                    // 가게 리스트에 대한 처리
                     if (stores.isEmpty()) {
                         _getStoreListState.value = Failure(null)
                         Timber.tag("RETROFIT").e("GET STORE LIST FAIL : EMPTY!!!")

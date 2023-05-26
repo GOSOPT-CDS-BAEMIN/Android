@@ -225,9 +225,7 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-
         </androidx.core.widget.NestedScrollView>
-
 
         <FrameLayout
             android:id="@+id/fl_order_btn"

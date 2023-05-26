@@ -19,7 +19,19 @@ class StoreAdapter : ListAdapter<Store, StoreAdapter.StoreViewHolder>(diffUtil) 
         RecyclerView.ViewHolder(binding.root) {
         fun bind(store: Store) {
             binding.store = store
+
             initFoodRecyclerView(store, binding.root.context)
+            calcTotalPricePerStore(store)
+        }
+
+        private fun calcTotalPricePerStore(store: Store) {
+            var sum = store.deliveryFee
+            for (food in store.foods) {
+                sum += food.price * food.foodCount
+            }
+
+            binding.tvStoreTotalPrice.text =
+                binding.root.context.getString(R.string.cart_item_price).format(sum)
         }
 
         private fun initFoodRecyclerView(store: Store, context: Context) {
