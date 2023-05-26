@@ -194,13 +194,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="14dp"
                     android:layout_marginStart="18dp"
+                    android:text="@{@string/cart_store_food_num(storeDummy.foods.size)}"
                     android:textAppearance="@style/TextAppearance.Baemin.body3"
                     android:textColor="@color/baemin_gray_5"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:text="총 2개"
-                    android:text="@{@string/cart_store_food_num(storeDummy.foods.size)}" />
+                    tools:text="총 2개" />
 
                 <TextView
                     android:id="@+id/tv_store_food_price"
