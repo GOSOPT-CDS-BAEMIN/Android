@@ -6,9 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.sopt.baemin.data.api.ApiFactory
 import com.sopt.baemin.data.model.response.MenuResponse
-import com.sopt.baemin.data.model.response.Review
 import com.sopt.baemin.data.model.response.ReviewResponse
-import com.sopt.baemin.data.model.response.StoreInfo
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -21,12 +19,6 @@ class DetailViewModel : ViewModel() {
     val reviewInfo: LiveData<ReviewResponse>
         get() = _reviewInfo
 
-    private val _storeInfo: MutableLiveData<StoreInfo> = MutableLiveData()
-    val storeInfo: LiveData<StoreInfo> = _storeInfo
-
-    private val _review = MutableLiveData<List<Review>>()
-    val review: LiveData<List<Review>> = _review
-
     private val _menuInfo = MutableLiveData<MenuResponse>()
     val menuInfo: LiveData<MenuResponse>
         get() = _menuInfo
@@ -38,13 +30,15 @@ class DetailViewModel : ViewModel() {
                 response: Response<ReviewResponse>
             ) {
                 if (response.isSuccessful) {
-                    Log.d("서버 통신 성공", response.message())
+                    Log.d("서버 통신 성공(리뷰)", response.body().toString())
                     _reviewInfo.value = response.body()
+                } else {
+                    response.body()?.message?.let { Log.d("서버통신 실패(40X)(리뷰)", response.message()) }
                 }
             }
 
             override fun onFailure(call: Call<ReviewResponse>, t: Throwable) {
-                Log.d("서버 통신 실패", t.toString())
+                Log.d("서버 통신 실패(리뷰)", t.toString())
             }
         })
     }
@@ -56,13 +50,13 @@ class DetailViewModel : ViewModel() {
                 response: Response<MenuResponse>
             ) {
                 if (response.isSuccessful) {
-                    Log.d("서버 통신 성공", response.message())
+                    Log.d("서버 통신 성공(메뉴)", response.body().toString())
                     _menuInfo.value = response.body()
                 }
             }
 
             override fun onFailure(call: Call<MenuResponse>, t: Throwable) {
-                Log.d("서버 통신 실패", t.toString())
+                Log.d("서버 통신 실패(메뉴)", t.toString())
             }
         })
     }
