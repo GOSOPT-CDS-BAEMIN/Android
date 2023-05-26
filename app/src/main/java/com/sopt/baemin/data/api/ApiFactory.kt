@@ -1,8 +1,10 @@
 package com.sopt.baemin.data.api
 
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
-import com.sopt.baemin.BuildConfig.*
-import com.sopt.baemin.data.service.ExampleService
+import com.sopt.baemin.BuildConfig.BASE_URL
+import com.sopt.baemin.BuildConfig.DEBUG
+import com.sopt.baemin.data.service.MenuService
+import com.sopt.baemin.data.service.ReviewService
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
@@ -18,7 +20,8 @@ object ApiFactory {
             HttpLoggingInterceptor().apply {
                 if (DEBUG) HttpLoggingInterceptor.Level.BODY
                 else HttpLoggingInterceptor.Level.NONE
-            })
+            }
+        )
         .build()
 
     @OptIn(ExperimentalSerializationApi::class)
@@ -31,6 +34,7 @@ object ApiFactory {
     inline fun <reified T> create(): T = retrofit.create(T::class.java)
 
     object ServicePool {
-        val exampleService = create<ExampleService>()
+        val menuService = create<MenuService>()
+        val reviewService = create<ReviewService>()
     }
 }
