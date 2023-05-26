@@ -10,8 +10,7 @@ import com.sopt.baemin.util.binding.BindingFragment
 
 class MenuFragment : BindingFragment<FragmentMenuBinding>(R.layout.fragment_menu) {
     private val viewModel: DetailViewModel by viewModels()
-    private val menuAdapter: MenuAdapter = MenuAdapter()
-
+    private val menuBestAdapter: MenuBestAdapter = MenuBestAdapter()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.vm = viewModel
@@ -25,12 +24,12 @@ class MenuFragment : BindingFragment<FragmentMenuBinding>(R.layout.fragment_menu
     }
 
     private fun initAdapter() {
-        binding.rvDetailMenu.adapter = menuAdapter
+        binding.rvDetailMenu.adapter = menuBestAdapter
     }
 
     private fun initObserve() {
         viewModel.menuInfo.observe(viewLifecycleOwner) {
-            menuAdapter.submitList(it.data.foods.toMutableList())
+            menuBestAdapter.submitList(it.data.foods.toMutableList())
         }
     }
 }

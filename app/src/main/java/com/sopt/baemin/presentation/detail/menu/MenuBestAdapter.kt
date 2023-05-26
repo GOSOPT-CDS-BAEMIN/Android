@@ -5,11 +5,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.sopt.baemin.data.model.response.Foods
-import com.sopt.baemin.databinding.ItemDetailMenuFoodBinding
+import com.sopt.baemin.databinding.ItemDetailMenuBestBinding
 import com.sopt.baemin.util.ItemDiffCallback
 
-class MenuAdapter :
-    ListAdapter<Foods, MenuAdapter.MenuViewHolder>(
+class MenuBestAdapter :
+    ListAdapter<Foods, MenuBestAdapter.MenuViewHolder>(
         menuDiffUtil
     ) {
 
@@ -18,7 +18,7 @@ class MenuAdapter :
         viewType: Int
     ): MenuViewHolder {
         val itemBinding =
-            ItemDetailMenuFoodBinding.inflate(
+            ItemDetailMenuBestBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
                 false
@@ -32,7 +32,7 @@ class MenuAdapter :
         holder.onBind(getItem(position))
     }
 
-    class MenuViewHolder(private val binding: ItemDetailMenuFoodBinding) :
+    class MenuViewHolder(private val binding: ItemDetailMenuBestBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun onBind(food: Foods) {
             binding.data = food
