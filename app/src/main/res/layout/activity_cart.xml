@@ -144,7 +144,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="20dp"
                     android:background="@color/white"
-                    android:paddingHorizontal="14dp"
+                    android:paddingHorizontal="16dp"
                     android:paddingVertical="24dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -183,6 +183,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="24dp"
+
                         android:text="결제예정금액"
                         android:textAppearance="@style/TextAppearance.Baemin.subhead1_16pt"
                         app:layout_constraintStart_toStartOf="@id/divider_cart_order"
@@ -215,9 +216,9 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
                     android:text="@string/cart_company_notice"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     android:textAppearance="@style/TextAppearance.Baemin.body10"
                     android:textColor="@color/baemin_gray_5"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/cl_cart_result" />

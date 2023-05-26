@@ -41,6 +41,9 @@ class CartActivity : BindingActivity<ActivityCartBinding>(R.layout.activity_cart
             ), 10500),
         )
         storeAdapter.submitList(dummyStores)
+
+        binding.tvOrderAmount.text = "41,500원"
+        binding.tvPayAmount.text = "50,500원"
     }
 
     private fun initCartRecyclerView() {
