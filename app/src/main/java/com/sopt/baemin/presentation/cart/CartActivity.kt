@@ -13,6 +13,8 @@ import com.sopt.baemin.util.state.RemoteUiState.*
 class CartActivity : BindingActivity<ActivityCartBinding>(R.layout.activity_cart) {
     private val viewModel by viewModels<CartViewModel>()
     private val storeAdapter by lazy { StoreAdapter() }
+    private var totalOrderAmount = 0
+    private var totalPayAmount = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +37,7 @@ class CartActivity : BindingActivity<ActivityCartBinding>(R.layout.activity_cart
                         storeAdapter.submitList(it)
                         updateTotalOrderAmount(it)
                         updateTotalPayAmount(it)
+                        updateOrderButtonText()
                     }
                 }
                 is Failure -> showSnackbar(
@@ -47,23 +50,23 @@ class CartActivity : BindingActivity<ActivityCartBinding>(R.layout.activity_cart
     }
 
     private fun updateTotalOrderAmount(storeList: List<Store>) {
-        var sum = 0
         for (store in storeList) {
             for (food in store.foods) {
-                sum += food.price * food.foodCount
+                totalOrderAmount += food.price * food.foodCount
             }
         }
-        binding.tvOrderAmount.text = getString(R.string.cart_item_price).format(sum)
+        binding.tvOrderAmount.text = getString(R.string.cart_item_price).format(totalOrderAmount)
     }
 
     private fun updateTotalPayAmount(storeList: List<Store>) {
-        var sum = 0
+        totalPayAmount = totalOrderAmount
         for (store in storeList) {
-            sum += store.deliveryFee
-            for (food in store.foods) {
-                sum += food.price * food.foodCount
-            }
+            totalPayAmount += store.deliveryFee
         }
-        binding.tvPayAmount.text = getString(R.string.cart_item_price).format(sum)
+        binding.tvPayAmount.text = getString(R.string.cart_item_price).format(totalPayAmount)
+    }
+
+    private fun updateOrderButtonText() {
+        binding.btnLastOrder.text = getString(R.string.cart_total_order_btn_text).format(totalPayAmount)
     }
 }
