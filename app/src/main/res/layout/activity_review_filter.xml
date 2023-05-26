@@ -110,11 +110,12 @@
             android:layout_marginTop="180dp"
             android:layout_marginRight="16dp"
             android:background="@drawable/btn_layout"
-            android:text="2개 리뷰 보기"
             android:textColor="@color/white"
             app:layout_constraintLeft_toRightOf="@+id/img_btn_reset"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_menu3" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_menu3"
+            tools:text="리뷰 보기" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
