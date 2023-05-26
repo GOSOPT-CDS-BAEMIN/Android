@@ -13,23 +13,20 @@ class MenuFragment : BindingFragment<FragmentMenuBinding>(R.layout.fragment_menu
     private val menuBestAdapter: MenuBestAdapter = MenuBestAdapter()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.lifecycleOwner = viewLifecycleOwner
         binding.vm = viewModel
-        initView()
         initAdapter()
         initObserve()
-    }
-
-    private fun initView() {
         viewModel.getMenu(1)
     }
 
     private fun initAdapter() {
-        binding.rvDetailMenu.adapter = menuBestAdapter
+        binding.rvDetailMenuBest.adapter = menuBestAdapter
     }
 
     private fun initObserve() {
         viewModel.menuInfo.observe(viewLifecycleOwner) {
-            menuBestAdapter.submitList(it.data.foods.toMutableList())
+            menuBestAdapter.submitList(it.data.foods)
         }
     }
 }

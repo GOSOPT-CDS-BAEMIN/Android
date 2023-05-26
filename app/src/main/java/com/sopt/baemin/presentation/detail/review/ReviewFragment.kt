@@ -1,6 +1,7 @@
 package com.sopt.baemin.presentation.detail.review
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.viewModels
 import com.sopt.baemin.R
@@ -15,6 +16,7 @@ class ReviewFragment : BindingFragment<FragmentReviewBinding>(R.layout.fragment_
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.lifecycleOwner = viewLifecycleOwner
         binding.vm = viewModel
         initAdapter()
         initObserve()
@@ -32,6 +34,7 @@ class ReviewFragment : BindingFragment<FragmentReviewBinding>(R.layout.fragment_
     private fun initObserve() {
         viewModel.reviewInfo.observe(viewLifecycleOwner) {
             reviewAdapter.submitList(it.data.toMutableList())
+            Log.d("asdf", it.data.toString())
         }
     }
 
