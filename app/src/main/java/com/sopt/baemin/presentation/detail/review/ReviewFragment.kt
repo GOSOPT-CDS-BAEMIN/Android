@@ -7,6 +7,7 @@ import com.sopt.baemin.R
 import com.sopt.baemin.databinding.FragmentReviewBinding
 import com.sopt.baemin.presentation.detail.DetailViewModel
 import com.sopt.baemin.util.binding.BindingFragment
+import com.sopt.baemin.util.extension.setSingleOnClickListener
 
 class ReviewFragment : BindingFragment<FragmentReviewBinding>(R.layout.fragment_review) {
     private val viewModel: DetailViewModel by viewModels()
@@ -31,6 +32,12 @@ class ReviewFragment : BindingFragment<FragmentReviewBinding>(R.layout.fragment_
     private fun initObserve() {
         viewModel.reviewInfo.observe(viewLifecycleOwner) {
             reviewAdapter.submitList(it.data.toMutableList())
+        }
+    }
+
+    private fun initReviewFilterBtnClickListener() {
+        binding.ivDetailReviewFilter.setSingleOnClickListener {
+            // startActivity(Intent(requireActivity(), 주영언니바텀시트::class.java))
         }
     }
 }
