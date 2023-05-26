@@ -3,6 +3,7 @@ package com.sopt.baemin.data.api
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import com.sopt.baemin.BuildConfig.*
 import com.sopt.baemin.data.service.ExampleService
+import com.sopt.baemin.data.service.FoodListReviewService
 import com.sopt.baemin.data.service.MenuDetailService
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
@@ -32,6 +33,7 @@ object ApiFactory {
     inline fun <reified T> create(): T = retrofit.create(T::class.java)
 
     object ServicePool {
+        val foodListReviewService = ApiFactory.create<FoodListReviewService>()
         val menuDetailService = ApiFactory.create<MenuDetailService>()
     }
 }
