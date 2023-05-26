@@ -34,18 +34,17 @@
             android:layout_width="68dp"
             android:layout_height="0dp"
             android:layout_marginStart="12dp"
-            app:imageResource="@{foodDummy.imgRes}"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintStart_toEndOf="@id/cb_food_sel"
             app:layout_constraintTop_toTopOf="@id/cb_food_sel"
-            tools:src="@drawable/ic_launcher_background" />
+            android:src="@drawable/ic_launcher_background" />
 
         <TextView
             android:id="@+id/tv_food_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="14dp"
-            android:text="@{foodDummy.name}"
+            android:text="@{food.foodName}"
             android:textAppearance="@style/TextAppearance.Baemin.subhead1_16pt"
             app:layout_constraintStart_toEndOf="@id/iv_food_img"
             app:layout_constraintTop_toTopOf="@id/iv_food_img"
@@ -56,7 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="@{@string/cart_item_price(foodDummy.price)}"
+            android:text="@{@string/cart_item_price(food.price)}"
             android:textAppearance="@style/TextAppearance.Baemin.body4"
             app:layout_constraintStart_toStartOf="@id/tv_food_name"
             app:layout_constraintTop_toBottomOf="@id/tv_food_name"
@@ -89,7 +88,7 @@
                 android:id="@+id/tv_food_num"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{@string/cart_store_each_food_num(foodDummy.num)}"
+                android:text="@{@string/cart_store_each_food_num(food.foodCount)}"
                 android:textAppearance="@style/TextAppearance.Baemin.body5"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/iv_food_num_plus"

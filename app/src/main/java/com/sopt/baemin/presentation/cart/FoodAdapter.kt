@@ -4,15 +4,15 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.sopt.baemin.data.entity.FoodDummy
+import com.sopt.baemin.data.model.response.Food
 import com.sopt.baemin.databinding.ItemStoreFoodBinding
 import com.sopt.baemin.util.ItemDiffCallback
 
-class FoodAdapter : ListAdapter<FoodDummy, FoodAdapter.FoodViewHolder>(diffUtil) {
+class FoodAdapter : ListAdapter<Food, FoodAdapter.FoodViewHolder>(diffUtil) {
     class FoodViewHolder(private val binding: ItemStoreFoodBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(foodDummy: FoodDummy) {
-            binding.foodDummy = foodDummy
+        fun bind(food: Food) {
+            binding.food = food
         }
     }
 
@@ -31,7 +31,7 @@ class FoodAdapter : ListAdapter<FoodDummy, FoodAdapter.FoodViewHolder>(diffUtil)
     }
 
     companion object {
-        private val diffUtil = ItemDiffCallback<FoodDummy>(
+        private val diffUtil = ItemDiffCallback<Food>(
             onItemsTheSame = { old, new -> old === new },
             onContentsTheSame = { old, new -> old == new }
         )

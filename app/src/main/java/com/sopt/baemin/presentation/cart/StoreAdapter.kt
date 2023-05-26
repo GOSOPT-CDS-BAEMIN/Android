@@ -10,19 +10,19 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.VERTICAL
 import com.sopt.baemin.R
-import com.sopt.baemin.data.entity.StoreDummy
+import com.sopt.baemin.data.model.response.Store
 import com.sopt.baemin.databinding.ItemCartStoreBinding
 import com.sopt.baemin.util.ItemDiffCallback
 
-class StoreAdapter : ListAdapter<StoreDummy, StoreAdapter.StoreViewHolder>(diffUtil) {
+class StoreAdapter : ListAdapter<Store, StoreAdapter.StoreViewHolder>(diffUtil) {
     class StoreViewHolder(private val binding: ItemCartStoreBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(storeDummy: StoreDummy) {
-            binding.storeDummy = storeDummy
-            initFoodRecyclerView(storeDummy, binding.root.context)
+        fun bind(store: Store) {
+            binding.store = store
+            initFoodRecyclerView(store, binding.root.context)
         }
 
-        private fun initFoodRecyclerView(storeDummy: StoreDummy, context: Context) {
+        private fun initFoodRecyclerView(store: Store, context: Context) {
             val foodAdapter = FoodAdapter()
             binding.rvStoreFood.adapter = foodAdapter
             binding.rvStoreFood.layoutManager = LinearLayoutManager(context)
@@ -34,7 +34,7 @@ class StoreAdapter : ListAdapter<StoreDummy, StoreAdapter.StoreViewHolder>(diffU
             }
             binding.rvStoreFood.addItemDecoration(divider)
 
-            foodAdapter.submitList(storeDummy.foods)
+            foodAdapter.submitList(store.foods)
         }
     }
 
@@ -53,7 +53,7 @@ class StoreAdapter : ListAdapter<StoreDummy, StoreAdapter.StoreViewHolder>(diffU
     }
 
     companion object {
-        private val diffUtil = ItemDiffCallback<StoreDummy>(
+        private val diffUtil = ItemDiffCallback<Store>(
             onItemsTheSame = { old, new -> old === new },
             onContentsTheSame = { old, new -> old == new }
         )
