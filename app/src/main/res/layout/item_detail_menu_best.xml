@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
-            android:text="@{data.price}"
+            android:text="11,000원"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="@id/tv_detail_menu_name"
             app:layout_constraintTop_toBottomOf="@id/tv_detail_menu_name"
