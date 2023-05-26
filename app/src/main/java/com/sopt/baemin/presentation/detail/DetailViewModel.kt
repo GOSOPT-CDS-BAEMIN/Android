@@ -4,20 +4,18 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.sopt.baemin.data.api.ApiClient
+import com.sopt.baemin.data.api.ApiFactory
 import com.sopt.baemin.data.model.response.MenuResponse
 import com.sopt.baemin.data.model.response.Review
 import com.sopt.baemin.data.model.response.ReviewResponse
 import com.sopt.baemin.data.model.response.StoreInfo
-import com.sopt.baemin.data.service.MenuService
-import com.sopt.baemin.data.service.ReviewService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class DetailViewModel : ViewModel() {
-    private val reviewService = ApiClient.getRetrofit().create(ReviewService::class.java)
-    private val menuService = ApiClient.getRetrofit().create(MenuService::class.java)
+    private val reviewService = ApiFactory.ServicePool.reviewService
+    private val menuService = ApiFactory.ServicePool.menuService
 
     private val _reviewInfo = MutableLiveData<ReviewResponse>()
     val reviewInfo: LiveData<ReviewResponse>

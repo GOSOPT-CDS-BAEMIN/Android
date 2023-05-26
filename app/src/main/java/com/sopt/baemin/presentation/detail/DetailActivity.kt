@@ -30,12 +30,14 @@ class DetailActivity : BindingActivity<ActivityDetailBinding>(R.layout.activity_
     }
 
     private fun setVisibility() {
-        binding.ssvStoreDetail.setOnScrollChangeListener(NestedScrollView.OnScrollChangeListener { _, _, scrollY, _, _ ->
-            if (scrollY > 600) {
-                binding.clDetailHeader.visibility = View.VISIBLE
-            } else {
-                binding.clDetailHeader.visibility = View.GONE
+        binding.ssvStoreDetail.setOnScrollChangeListener(
+            NestedScrollView.OnScrollChangeListener { _, _, scrollY, _, _ ->
+                if (scrollY > 600) {
+                    binding.clDetailHeader.visibility = View.VISIBLE
+                } else {
+                    binding.clDetailHeader.visibility = View.GONE
+                }
             }
-        })
+        )
     }
 }
