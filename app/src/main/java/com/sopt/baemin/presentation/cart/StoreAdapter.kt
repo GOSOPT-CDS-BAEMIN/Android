@@ -33,6 +33,7 @@ class StoreAdapter : ListAdapter<StoreDummy, StoreAdapter.StoreViewHolder>(diffU
                 divider.setDrawable(drawable)
             }
             binding.rvStoreFood.addItemDecoration(divider)
+
             foodAdapter.submitList(storeDummy.foods)
         }
     }

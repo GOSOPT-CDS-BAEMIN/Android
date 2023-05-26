@@ -98,57 +98,24 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/rv_store_food">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                <RadioButton
+                    android:layout_width="76dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/sel_cart_radio_button"
+                    android:button="@null"
+                    android:paddingStart="32dp"
+                    android:text="배달"
+                    android:textAppearance="@style/TextAppearance.Baemin.subhead1_16pt" />
 
-                    <RadioButton
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:background="@drawable/sel_cart_radio_button"
-                        android:button="@null" />
-
-                    <ImageView
-                        android:id="@+id/iv_delivery"
-                        android:layout_width="46dp"
-                        android:layout_height="16dp"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="8dp"
-                        android:src="@drawable/ic_delivery" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="14dp"
-                        android:text="@{@string/cart_delivery_fee(storeDummy.deliveryFee)}"
-                        android:textAppearance="@style/TextAppearance.Baemin.body6"
-                        android:textColor="?colorPrimary"
-                        tools:text="배달팁 2,800원" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <RadioButton
+                    android:layout_width="76dp"
+                    android:layout_height="24dp"
                     android:layout_marginTop="10dp"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:background="@drawable/sel_cart_radio_button"
-                        android:button="@null" />
-
-                    <ImageView
-                        android:id="@+id/iv_pickup"
-                        android:layout_width="46dp"
-                        android:layout_height="16dp"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="8dp"
-                        android:src="@drawable/ic_pickup" />
-
-                </LinearLayout>
+                    android:background="@drawable/sel_cart_radio_button"
+                    android:button="@null"
+                    android:paddingStart="32dp"
+                    android:text="포장"
+                    android:textAppearance="@style/TextAppearance.Baemin.subhead1_16pt" />
 
             </RadioGroup>
 
