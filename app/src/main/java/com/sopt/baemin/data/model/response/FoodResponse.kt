@@ -1,13 +1,10 @@
 package com.sopt.baemin.data.model.response
 
-
-import kotlinx.serialization.*
-import kotlinx.serialization.json.*
-import kotlinx.serialization.descriptors.*
-import kotlinx.serialization.encoding.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 @Serializable
-data class FoodResponse (
+data class FoodResponse(
     val status: Long? = null,
     val success: Boolean? = null,
     val message: String? = null,
@@ -15,13 +12,13 @@ data class FoodResponse (
 )
 
 @Serializable
-data class Data (
+data class Data(
     val storeInfo: StoreInfo? = null,
     val foods: List<Food>? = null
 )
 
 @Serializable
-data class Food (
+data class Food(
     @SerialName("foodId")
     val foodID: Long? = null,
 
@@ -36,7 +33,7 @@ data class Food (
 )
 
 @Serializable
-data class StoreInfo (
+data class StoreInfo(
     @SerialName("storeId")
     val storeID: Long? = null,
 

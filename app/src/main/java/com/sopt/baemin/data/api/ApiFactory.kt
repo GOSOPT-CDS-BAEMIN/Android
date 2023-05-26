@@ -1,13 +1,11 @@
 package com.sopt.baemin.data.api
 
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
-import com.sopt.baemin.BuildConfig.BASE_URL
-import com.sopt.baemin.BuildConfig.DEBUG
-import com.sopt.baemin.data.service.MenuService
-import com.sopt.baemin.data.service.ReviewService
 import com.sopt.baemin.BuildConfig.*
 import com.sopt.baemin.data.service.FoodListReviewService
 import com.sopt.baemin.data.service.MenuDetailService
+import com.sopt.baemin.data.service.MenuService
+import com.sopt.baemin.data.service.ReviewService
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
