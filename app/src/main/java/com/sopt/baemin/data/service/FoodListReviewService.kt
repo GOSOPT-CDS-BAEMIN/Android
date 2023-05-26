@@ -6,8 +6,7 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface FoodListReviewService {
-    @GET("/{storeId}")
+    @GET("/1")
     fun getFoodListReview(
-        @Path("storeId") storeId: Int
     ):Response<FoodResponse>
 }
