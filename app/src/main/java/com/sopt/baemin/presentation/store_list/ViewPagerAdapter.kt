@@ -1,4 +1,4 @@
-package com.sopt.baemin.presentation.view
+package com.sopt.baemin.presentation.store_list
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity

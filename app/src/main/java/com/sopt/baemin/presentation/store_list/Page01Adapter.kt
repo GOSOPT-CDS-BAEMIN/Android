@@ -1,4 +1,4 @@
-package com.sopt.baemin.presentation.view
+package com.sopt.baemin.presentation.store_list
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -27,14 +27,14 @@ class Page01Adapter :
     }
 
     override fun onBindViewHolder(holder: Page01ViewHolder, position: Int) {
-        holder.bind(currentList[position])
+        holder.bind(getItem(position))
     }
 
     class Page01ViewHolder(private val binding: ItemPagerBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Datum) {
             with(binding) {
-                Glide.with(root).load(item.storeImages?.get(0)).into(imgFood1)
+                Glide.with(root.context).load(item.storeImages?.get(0)).into(imgFood1)
                 Glide.with(root).load(item.storeImages?.get(1)).into(imgFood2)
                 Glide.with(root).load(item.storeImages?.get(2)).into(imgFood3)
 

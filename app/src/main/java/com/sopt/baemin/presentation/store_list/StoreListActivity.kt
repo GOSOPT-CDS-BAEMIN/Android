@@ -4,7 +4,6 @@ import android.os.Bundle
 import com.google.android.material.tabs.TabLayoutMediator
 import com.sopt.baemin.R
 import com.sopt.baemin.databinding.ActivityStorelistBinding
-import com.sopt.baemin.presentation.view.ViewPagerAdapter
 import com.sopt.baemin.util.binding.BindingActivity
 
 class StoreListActivity : BindingActivity<ActivityStorelistBinding>(R.layout.activity_storelist) {

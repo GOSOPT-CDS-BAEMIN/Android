@@ -72,17 +72,20 @@
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tablayout"
-            app:layout_constraintTop_toBottomOf="@+id/constraint_layout_top"
             android:layout_width="match_parent"
-            app:tabSelectedTextColor="@color/black"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/constraint_layout_top"
             app:tabIndicatorColor="@color/black"
-            android:layout_height="wrap_content" />
+            app:tabSelectedTextColor="@color/black" />
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewpager"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tablayout"
             tools:layout_editor_absoluteX="-148dp"
             tools:text="여기는 뷰페이저2" />
