@@ -2,4 +2,5 @@
     <string name="app_name">Baemin</string>
 
     <string name="binding_error_msg">Binding not initialized to reference the view.</string>
+    <string name="init_review">리뷰가 조회되었습니다</string>
 </resources>
