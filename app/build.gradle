@@ -97,7 +97,7 @@ dependencies {
     kapt "com.github.bumptech.glide:compiler:4.15.1"
 
     // Sticky Scroll View
-    implementation "com.github.amarjain07:StickyScrollView:1.3.0"
+    implementation "com.github.amarjain07:StickyScrollView:1.0.3"
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
