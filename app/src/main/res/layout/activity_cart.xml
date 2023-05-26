@@ -245,8 +245,8 @@
                 android:layout_height="wrap_content"
                 android:padding="14dp"
                 android:stateListAnimator="@null"
-                android:text="배달 주문하기"
-                android:textAppearance="@style/TextAppearance.Baemin.headline_18pt" />
+                android:textAppearance="@style/TextAppearance.Baemin.headline_18pt"
+                tools:text="주문하기" />
         </FrameLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

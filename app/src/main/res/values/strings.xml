@@ -12,4 +12,6 @@
     <string name="cart_delivery_fee">배달팁 %d원</string>
     <string name="cart_store_total_food_num">총 %d개</string>
     <string name="cart_store_each_food_num">%d</string>
+
+    <string name="cart_total_order_btn_text">%d원 주문하기</string>
 </resources>
