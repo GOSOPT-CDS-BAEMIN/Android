@@ -12,13 +12,19 @@
 
 ### 업체 리스트
 
+<img width="300" src="https://github.com/GOSOPT-CDS-BAEMIN/Android/assets/68090939/a19bd4b8-0472-4840-8554-67c50f367c91"/>
+
 ### 업체 상세
+
+<img width="300" src="https://github.com/GOSOPT-CDS-BAEMIN/Android/assets/68090939/08d8591a-214c-45d9-bee5-cc90f92c76b8"/>
 
 ### 메뉴 상세
 
 <img alt="menu-detail" width="300" src="https://github.com/GOSOPT-CDS-BAEMIN/Android/assets/68090939/bc558c4a-0dc0-4264-bde8-6750a0ef741d"/> 
 
 ### 리뷰 필터링 목록
+
+<img width="300" src="https://github.com/GOSOPT-CDS-BAEMIN/Android/assets/68090939/f9c8a47c-7ba6-4632-9400-d855dc18727c"/>
 
 ### 리뷰 필터링 바텀시트
 

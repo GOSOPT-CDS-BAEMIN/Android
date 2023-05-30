@@ -3,6 +3,7 @@ package com.sopt.baemin.data.api
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import com.sopt.baemin.BuildConfig.*
 import com.sopt.baemin.data.service.*
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
@@ -33,6 +34,10 @@ object ApiFactory {
         val foodListReviewService = create<FoodListReviewService>()
         val menuDetailService = create<MenuDetailService>()
 
+        val menuService = create<MenuService>()
+        val reviewService = create<ReviewService>()
+
         val cartService = create<CartService>()
+
     }
 }

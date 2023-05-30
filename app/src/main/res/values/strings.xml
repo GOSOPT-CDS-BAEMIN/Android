@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Baemin</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="detail_warning">메뉴 사진은 연출된 이미지로 실제 조리된 음식과 다를 수 있습니다.\n\n상단 메뉴 및 가격은 업소에서 제공한 정보를 기준으로 작성되었으며 변동될 수 있습니다.\n\n(주)우아한형제들은 상품거래에 대한 통신판매중개자이며, 통신판매의 당사자가 아닙니다. 따라서, (주)우아한형제들은 상품거래정보 및 거래에 대하여 책임을 지지 않습니다.</string>
+    <string name="detail_menu_info">★ 중국 전통 도삭면, 산시도삭면 홍대에 오픈했습니다!!★\n\n-물가 상승으로 인한 홍대 인근 학생과 고객들의 부담을 덜어드리기 위해 합리적인 가격으로…</string>
 
     <string name="food2"><![CDATA[족발\u00B7보쌈]]></string>
     <string name="food3"><![CDATA[찜\u00B7탕\u00B7찌개]]></string>
